@@ -1,4 +1,4 @@
-.PHONY: all clean lib
+.PHONY: all clean
 
 all:
 
@@ -7,7 +7,3 @@ all:
 clean:
 
 	$(MAKE) -C ../ clean
-	
-lib:
-
-	$(MAKE) -C ../ lib
