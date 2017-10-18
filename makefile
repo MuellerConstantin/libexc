@@ -40,7 +40,7 @@ $(DEPDIR)/%.d: $(SRCDIR)/%.c
 	mkdir -p $(@D)
 	$(CC) $(INCLUDE) -MM -MT "$@ $(patsubst %.d, %.o, $@)" -MF $@ $<
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
+$(OBJDIR)/%.o: $(SRCDIR)/%.c $(DEPDIR)/%.d
 
 	mkdir -p $(@D)
 	$(CC) $(CCFLAGS) $(INCLUDE) $< -o $@

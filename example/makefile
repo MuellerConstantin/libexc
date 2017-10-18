@@ -33,6 +33,6 @@ $(BIN): $(OBJS)
 
 	$(CC) $(INCLUDE) -MM -MT "$@ $(patsubst %.d, %.o, $@)" -MF $@ $<
 
-%.o: %.c
+%.o: %.c %.d
 
 	$(CC) $(CFLAGS) $(INCLUDE) $< -o $@
