@@ -1,5 +1,6 @@
 # libexc
-> A small and portable ANSI-C exception library
+
+> Small and portable ANSI-C exception handling library
 
 ## Overview
 
