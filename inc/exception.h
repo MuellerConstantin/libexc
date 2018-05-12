@@ -55,11 +55,11 @@ extern "C"
 	else if(_exception_table_head->exception.number ==					\
 		EXCEPTION.number)
 			
-#define EXC_DEFAULT														\
+#define EXC_FINALLY														\
 																		\
 	else if(0 != _exception_table_head->exception.number)
 		
-#define EXC_FINALLY														\
+#define EXC_END														    \
 																		\
 	else 																\
 	{																	\
@@ -73,6 +73,8 @@ extern "C"
 	_exception_table_pop(); }
 	
 #define EXC_THROW(EXCEPTION) _exception_throw(EXCEPTION, __FILE__, __LINE__)
+
+#define EXC_THROWS(EXCEPTION_LIST)
 
 /* structure which define the new exception type */
 

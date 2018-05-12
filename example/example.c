@@ -41,18 +41,18 @@ int main(int argc, char **argv)
 	{
 		printf("exception was thrown: logic_error\n");
 	}
-	EXC_DEFAULT
+	EXC_FINALLY
 	{
 		printf("exception was thrown: unknown\n");
 	}
-	EXC_FINALLY
+	EXC_END
 	
 	EXC_THROW(my_exception);
 	
 	return EXIT_SUCCESS;
 }
 
-void fn(int value)
+void fn(int value) EXC_THROWS(logic_error)
 {
 	if(0 > value)
 	{

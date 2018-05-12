@@ -18,7 +18,7 @@ used for exception handling (definition: [exception.h](inc/exception.h)):
 
 - `EXC_TRY`
 - `EXC_CATCH`
-- `EXC_DEFAULT`
+- `EXC_END`
 - `EXC_FINALLY`
 - `EXC_THROW`
 - `EXC_DECLARE`
@@ -48,11 +48,11 @@ int fn(void)
   {
     ...
   }
-  EXC_DEFAULT
+  EXC_FINALLY
   {
     ...
   }
-  EXC_FINALLY
+  EXC_END
   
   return 0;
 }
